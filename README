@@ -1,0 +1,31 @@
+Name: Karan Sharma
+SID: 1644116
+CCID: ks2
+CMPUT 275 W22
+Navigation System Part 2
+
+Running Instructions:
+    1. Compile the server
+        - Run the makefile provided in the server folder by executing "make" in the terminal
+    2. Run the client and server
+        - Run the makefile provided in the base directory by executing "make" in the terminal
+        - If an error occurs, or the server fails to open, execute "make clean" in the terminal, then repeat from step 1.
+    3. Select two points on the map window, and shortest path between the two points will be displayed
+        - Client and server will continue to run, allowing user to select more points if desired.
+    4. When finished close the map window, and the server and client should both quit.
+
+Notes and Assumptions:
+    Assumptions:
+        User will compile server before running client and server.
+        Path does not take into account speed limits/lights.
+
+Makefile Targets:
+    - make run: runs the client and server programs in seperate terminals. Does not compile server.
+    - make clean: removes all executable, objects and named pipes.
+
+    /server
+    - make server (default): Builds and compiles the project
+    - make server.o: Builds the server.cpp object file
+    - make dijkstra.o: Builds the dijkstra.cpp object file
+    - make digraph.o: Builds the digraph.cpp object file
+    - make clean: Removes all object files and executables
